@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="row">
+  <div>
+    <div class="description">
+      {% block description %}
+      <p>This site tracks <a href="/about">Data Packages</a> related to the topic of <b>Vaccinations</b> - <a href="/contact">further contributions</a> are welcome!
+      </p><p>These datasets will be supported at an upcoming <b><a href="https://www2.deloitte.com/ch/en/pages/careers/articles/hackathon.html" target="_blank">Hackathon</a></b>
+      </p><p>This repository is maintained by the <a href="http://schoolofdata.ch">School of Data</a> working group in Switzerland. Need tools to work with data? <a href="https://github.com/schoolofdata-swiss/datacentral/wiki" target="_blank">Visit our wiki</a>.
+      {% endblock description %}
+    </div>
+    <div class="main">
+      <div class="search">
+        <input id="search" type="text" placeholder="Search datasets..." />
+        <span id="spinner"><img src="/img/ajax-loader.gif" alt="Loading..." title="Loading..." /></span>
+      </div>
+      <ul class="datasets">
+        <li class="notfound">
+          No datasets found.
+        </li>
+        {% for d in datapackages %}
+        <li class="dataset-{{ d.original_name }}">
+          <a href="/{{ d.name }}/">
+            <h3>{{ d.title }}</h3>
+            <span>{{ d.description }}</span>
+            <span class="source">
+              {% if d.sources %}
+              <em>Sources:</em>
+              {% for s in d.sources %}
+                {{ s.name }}
+              {% endfor %}
+              {% endif %}
+            </span>
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock content %}
