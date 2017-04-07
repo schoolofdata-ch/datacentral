@@ -171,7 +171,10 @@ def process_datapackage(pkg_name, repo_dir, repo_url):
 
     # get main attributes
     pkg_info['name'] = pkg_name
-    pkg_info['homepage'] = repo_url
+    if 'homepage' in metadata:
+        pkg_info['homepage'] = metadata['homepage']
+    else:
+        pkg_info['homepage'] = repo_url
     pkg_info['original_name'] = metadata['name']
     pkg_info['title'] = metadata['title']
     pkg_info['license'] = metadata.get('license')
