@@ -11,6 +11,7 @@ def download_file(folder, url, filename=None):
     if filename is None:
         filename = url.split('/')[-1]
     r = requests.get(url, stream=True)
+    if r.status_code != 200: return None
     with open(os.path.join(folder, filename), 'wb') as f:
         for chunk in r.iter_content(chunk_size=1024):
             if chunk: # filter out keep-alive new chunks
@@ -38,6 +39,9 @@ def fetch_data_package(url, dir_name):
         os.makedirs(data_folder)
     # download a copy of the datapackage
     download_file(dir_name, url, 'datapackage.json')
+    # ..and readme
+    download_file(dir_name, url.replace('datapackage.json', 'README.md'))
+    log.debug('Downloading %d resources' % len(spec['resources']))
     for res in spec['resources']:
         if 'path' in res:
             # paths override urls, for local mirrors
@@ -50,6 +54,5 @@ def fetch_data_package(url, dir_name):
             # skip this resource
             log.debug("Skipping: %s" % res)
             continue
-        if 'title' in res:
-            log.debug('Downloaded: %s - %s' % (res['title'], fn))
-            return True
+        log.debug('Downloaded: %s - %s' % (res['title'] or '', fn))
+    return True
