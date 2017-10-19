@@ -43,6 +43,7 @@ install:
 	virtualenv .env --no-site-packages --distribute --prompt=\(datacentral\)
 	. `pwd`/.env/bin/activate; pip install -r requirements.txt
 	cp settings.conf.sample settings.conf
+	mkdir _output
 
 serve:
 	. `pwd`/.env/bin/activate; cd _output && livereload -p $(SERVER_PORT)
@@ -51,7 +52,7 @@ deploy:
 	rsync --compress --progress --recursive --update --delete _output/ $(SSH_PATH)
 
 clean:
-	rm -fr repos _output
+	rm -fr repos _output .env
 
 test:
 	. `pwd`/.env/bin/activate; nosetests tests.py
