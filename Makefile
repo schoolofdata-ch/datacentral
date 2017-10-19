@@ -42,7 +42,7 @@ build-offline:
 install:
 	virtualenv .env --no-site-packages --distribute --prompt=\(datacentral\)
 	. `pwd`/.env/bin/activate; pip install -r requirements.txt
-	cp settings.conf.sample settings.conf
+	cp -u settings.conf.sample settings.conf
 	mkdir _output
 
 serve:
