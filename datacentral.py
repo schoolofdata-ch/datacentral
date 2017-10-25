@@ -385,8 +385,12 @@ def generate(offline=False,
             for d in datafiles:
                 log.info("Copying %s" % d['path'])
                 # copy file
-                target = os.path.join(output_dir, os.path.basename(d['path']))
-                shutil.copyfile(os.path.join(dir_name, d['path']), target)
+                try:
+                    target = os.path.join(output_dir, os.path.basename(d['path']))
+                    shutil.copyfile(os.path.join(dir_name, d['path']), target)
+                except IOError:
+                    log.warn("Unable to copy to %s" % target)
+                    continue
                 # generate JSON version of CSV
                 if target.endswith('.csv'):
                     csv2json(target, target.replace(".csv", ".json"))
