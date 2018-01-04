@@ -1,7 +1,5 @@
-Hey -- You just got Datacentral working!
+[![Open Food Data](/img/openfood-logo.png)](http://food.opendata.ch)
 
-If you haven't already, copy the `settings.conf.sample` file to `settings.conf`, and edit the new file to edit the datasets to be listed.
+#### Data Packages for use in [Open Food Data](http://food.opendata.ch) projects. **[Contributions welcome](https://schoolofdata-ch.github.io/2018/01/01/Food-Data-Expedition.html)**!
 
-This sidebar is a good place to tell your visitors what this site is about in a few paragraphs. You can edit this in `content/welcome_text.md`.
-
-Have fun with data!
+The [repository](https://github.com/schoolofdata-ch/datacentral/tree/foodopendata) is maintained by the [School of Data](http://schoolofdata.ch) working group. Need tools to work with data? [Visit our wiki for links](https://github.com/schoolofdata-swiss/datacentral/wiki).
