@@ -2,8 +2,8 @@
 _output/
 # repos are automatically cloned
 repos/
-# settings file is private
-settings.conf
+# settings file is private if dotted
+.settings.conf
 # virtualenv is local
 .env/
 

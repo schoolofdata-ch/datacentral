@@ -233,6 +233,9 @@ def generate(offline=False,
     global env, packages
     # Read the config file
     parser = SafeConfigParser()
+    if not os.path.exists(config_file):
+        log.info("Using private .settings.config file")
+        config_file = '.' + config_file
     parser.read(config_file)
     # Load the theme and set up Jinja
     theme_name = parser.get('ui', 'theme')
