@@ -2,16 +2,12 @@
 
 .nav, .header, .row, body { background: white; }
 
-.header h1 #logo img {
-  height: 2.8em;
-	width: auto;
-  position: absolute;
-  top: 5px;
-  z-index: 0;
+.header h1 #logo {
+  height: auto; width: auto;
 }
 
 @media only screen and (max-width: 480px) {
-	.header h1 #logo img { display: none }
+	.header h1 #logo { display: none }
 }
 
 .last_updated {
