@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {% block title %}
+      <title>Datacentral</title>
+    {% endblock %}
+    <meta name="description" content="An open data repository">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/custom.css">
+  </head>
+  <body>
+
+    <nav class="nav">
+      <div>
+        <ul>
+            <li><a href="/about/">About</a></li>
+            <li><a href="https://schoolofdata-ch.github.io/index.en.html#contact">Contact</a></li>
+          <li><a href="/api.json">API</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="header">
+      <div>
+        <h1>
+          <a href="/">
+            <img id="logo" src="/img/datapackage.png" alt="Homepage">
+            <span id="sitename">
+              Datacentral
+            </span>
+          </a>
+        </h1>
+      </div>
+    </header>
+    {% block content %}{% endblock %}
+    <footer class="footer row">
+      <div>
+        <p>
+          Hosted and supported by
+            <a rel="external" target="_blank" href="http://food.opendata.ch">
+              <strong>Opendata.ch</strong></a>
+        </p>
+        <ul>
+          <li>
+            Swiss Chapter of&nbsp;
+            <a rel="external" target="_blank" href="https://okfn.org">
+              <img src="/img/okfn.png" alt="OKI">
+              <strong>Open Knowledge</strong>
+            </a>
+          </li>
+        </ul>
+        <p>
+          Powered by <a rel="external" target="_blank" href="https://github.com/schoolofdata-ch/datacentral">
+            <strong>Datacentral</strong></a><br>
+            <a href="https://github.com/centraldedados/datacentral"><img alt="star this repo" src="http://githubbadges.com/star.svg?user=centraldedados&repo=datacentral&style=flat" /></a>
+            <a href="https://github.com/centraldedados/datacentral/fork"><img alt="fork this repo" src="http://githubbadges.com/fork.svg?user=centraldedados&repo=datacentral&style=flat" /></a>
+        </p>
+      </div>
+    </footer>
+    <script src="/js/jquery-3.0.0.min.js"></script>
+    <script src="/js/underscore-min.js"></script>
+    <script src="/js/search.js"></script>
+  </body>
+</html>

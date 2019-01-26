@@ -1,7 +1,5 @@
-Hey -- You just got Datacentral working!
+[![Open Energy Data](https://energy.opendata.ch/files/2014/01/oed.png)](https://opendata.ch/projects/energy-data-hackdays-2019/)
 
-If you haven't already, copy the `settings.conf.sample` file to `settings.conf`, and edit the new file to edit the datasets to be listed.
+#### Data Packages for use in Open Energy Data projects.
 
-This sidebar is a good place to tell your visitors what this site is about in a few paragraphs. You can edit this in `content/welcome_text.md`.
-
-Have fun with data!
+_Contributions welcome!_ Visit the [GitHub repository](https://github.com/schoolofdata-ch/datacentrala) and raise an Issue to contact the team. Need tools to work with data? [Visit our wiki for links](https://github.com/schoolofdata-swiss/datacentral/wiki).
