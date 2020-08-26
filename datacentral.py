@@ -12,11 +12,6 @@ TODO:
 
 '''
 
-try:
-    from configparser import SafeConfigParser
-except ImportError:
-    from ConfigParser import SafeConfigParser
-
 import jinja2
 import git
 import sys
@@ -30,6 +25,7 @@ import zipfile
 import glob
 import time
 
+from configparser import ConfigParser
 from utils import csv2json, download_file, fetch_data_package
 from zenlog import log
 
@@ -232,7 +228,7 @@ def generate(offline=False,
     '''Main function that takes care of the whole process.'''
     global env, packages
     # Read the config file
-    parser = SafeConfigParser()
+    parser = ConfigParser()
     parser.read(config_file)
     # Load the theme and set up Jinja
     theme_name = parser.get('ui', 'theme')
