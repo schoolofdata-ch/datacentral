@@ -1,9 +1,13 @@
 # don't track the output dir
 _output/
+
 # repos are automatically cloned
 repos/
-# settings file is private
-settings.conf
+
+# settings file is private unless this is a dedicated branch
+# *** be careful when merging upstream! ***
+#settings.conf
+
 # virtualenv is local
 .env/
 

@@ -18,6 +18,3 @@ GitPython = "*"
 Jinja2 = "*"
 Markdown = "*"
 MarkupSafe = "*"
-
-[requires]
-python_version = "3.7"
