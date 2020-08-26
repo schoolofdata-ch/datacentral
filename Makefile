@@ -1,23 +1,23 @@
-# Project : Data Central
+# Project : Datacentral
 # -----------------------------------------------------------------------------
 # Author : Ricardo Lafuente <r@manufacturaindependente.org>
 # -----------------------------------------------------------------------------
 # License : GNU General Public License
 # -----------------------------------------------------------------------------
-# This file is part of the Data Central package.
+# This file is part of the Datacentral package.
 #
-# Data Central is free software: you can redistribute it and/or modify
+# Datacentral is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 #
-# Data Central is distributed in the hope that it will be useful,
+# Datacentral is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
-# along with Data Central. If not, see <http://www.gnu.org/licenses/>.
+# along with Datacentral. If not, see <http://www.gnu.org/licenses/>.
 
 # This is *heavily* based on Edouard Richard's excellent Makefiles.
 # See https://github.com/jplusplus/resonate2014/blob/master/Makefile for

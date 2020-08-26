@@ -1,14 +1,16 @@
-Data Central
-============
+Datacentral
+===========
 
-This is a lightweight platform to easily publish and distribute datasets. It was created to be the base for [Central de Dados](http://centraldedados.pt), a repository of data packages related to Portugal. It also used for Data Expeditions and hackathons of [Opendata.ch](https://opendata.ch/).
+This is a static site generator to easily publish and distribute datasets with [Frictionless Data](https://frictionlessdata.io). It was created to be the base for [Central de Dados](http://centraldedados.pt), a repository of data packages related to Portugal. It also used for Data Expeditions and hackathons of [Opendata.ch](https://opendata.ch/).
+
+:exclamation: Note that this project is currently not very actively supported: please wear a hard hat when compiling :construction_worker:
 
 It uses Open Knowledge's excellent [Data Package](http://frictionlessdata.io/specs/data-package/) specification as a
 common format to provide datasets. See the [Frictionless Data
 vision](http://frictionlessdata.io) document to understand why it's
 crucial to think about dataset packaging and distribution.
 
-The main design principle when coming up with Data Central was
+The main design principle when coming up with Datacentral was
 portability and simplicity of deployment. It is a framework-less
 approach, using Python scripts to gather and compile all datasets,
 creating a static HTML web site. Static sites might not be terribly
@@ -22,7 +24,7 @@ sexy, but they're extremely useful for some purposes:
 We informally refer to this project as "the poor man's
 [CKAN](http://ckan.org)".
 
-Data Central even exposes a static JSON 'API', so that developers
+Datacentral even exposes a static JSON 'API', so that developers
 have an easy access to the available datasets and their metadata
 on the portal.
 
@@ -43,7 +45,7 @@ If it's not there, you can install it with:
    create a local virtualenv and install the necessary
    dependencies; it shouldn't be necessary to create a virtualenv
    since the `make` commands are all set to work with the venv
-   that `make install` creates inside the Data Central dir.
+   that `make install` creates inside the Datacentral dir.
 
 (A) **Alternative installation**
 
